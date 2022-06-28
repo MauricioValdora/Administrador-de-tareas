@@ -21,7 +21,7 @@ function TareaFormulario(props){
       completada:false
     }
 
-    console.log(tareaNueva)
+    props.onSubmit(tareaNueva)
   }
   return(
     <form className="tarea-formulario"
@@ -32,6 +32,7 @@ function TareaFormulario(props){
         placeholder="Escribe tu tarea"
         name="texto"
         onChange={manejarCambio}
+        
       />
       <button className="tarea-boton">
         Agregar Tarea
